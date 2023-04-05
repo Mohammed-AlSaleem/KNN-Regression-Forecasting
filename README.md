@@ -7,7 +7,7 @@ The problem is to forecast the travel times between two places (points) which fr
 The data we have are day order, the season in the year (1 to 3), the day of the week (1 to 6), the period of the day (1 to 4), and the travel time, but there are some measurement errors we need to deal with.
 
 
-### Mathematical Methodology for KNN Regression:
+## Mathematical Methodology for KNN Regression:
 
 The first step is calculating the distance between our point (the day and the period with all features) and nearest k neighbors, in this project Manhattan distance is used (Minkowski distance with p = 1) which is the distance between the real vectors of features calculated by the sum of their absolute difference.
 
