@@ -7,7 +7,10 @@ The problem is to forecast the travel times between two places (points) which fr
 The data we have are day order, the season in the year (1 to 3), the day of the week (1 to 6), the period of the day (1 to 4), and the travel time, but there are some measurement errors we need to deal with.
 
 
-## Literature review on KNN Regression:
+## Mathematical Methodology for KNN Regression:
 
-KNN regression is a method that depends on the neighbor observations with independent variables to forecast future values. KNN regression considers as an intuitive manner, not a parametric method.
-The number of neighbors which will be calculated represented by ‘k’, calculating the distance between neighbors can be done in many ways, the famous one is Minkowski distance. When the power parameter (p) equal to 2 it called “Euclidean Distance”, and when it equal to 1 it called “Manhattan Distance”. The distance has an inverse relationship with the weight of neighbors.
+The first step is calculating the distance between our point (the day and the period with all features) and nearest k neighbors, in this project Manhattan distance is used (Minkowski distance with p = 1) which is the distance between the real vectors of features calculated by the sum of their absolute difference.
+
+After calculating the distances with the nearest k neighbors, we calculate the weighted average of their corresponding times and assign it as the time of our point.
+![image](https://user-images.githubusercontent.com/129967291/230217511-5cf1609b-e1b9-43ec-9c34-f8fd499a6dee.png)
+
